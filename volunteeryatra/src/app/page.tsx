@@ -72,7 +72,7 @@ export default function Home() {
         {loading ? (
           <Loading />
         ) : (
-          <div className="flex flex-wrap flex-col gap-10 m-auto md:px-10  md:flex-row  ">
+          <div className="flex flex-wrap flex-col justify-center gap-10 m-auto md:px-10  md:flex-row  ">
             {data.map((data) => (
               <Card
                 title={data.title}
