@@ -1,12 +1,12 @@
 This is a simplified version of the https://www.volunteeryatra.com/ platform. 
 
 🚀 Tech Stack
-Frontend: Next.js (TypeScript, App Router)
-Backend: Express.js (TypeScript, Node.js)
-Database: Supabase (PostgreSQL)
-Deployment:
-  Backend -> AWS EC2 (Ubuntu, Node.js, PM2, Nginx)
-  Frontend -> Vercel
+- Frontend: Next.js (TypeScript, App Router)
+- Backend: Express.js (TypeScript, Node.js)
+- Database: Supabase (PostgreSQL)
+- Deployment:
+   Backend -> AWS EC2 (Ubuntu, Node.js, PM2, Nginx)
+   Frontend -> Vercel
 
 📌 Features
 1. Public page showing all volunteer opportunities
