@@ -62,31 +62,27 @@ export default function Home() {
   return (
     // test changes
     <div className="text-3xl text-green-600">
-      <div className="body flex flex-col relative">
-        <div className="search my-20 ">
-          <Search setSearch={setSearch} />
-          {data.length == 0 && (
-            <div className="text-center text-black my-10">Nothing Matched!</div>
-          )}
-          {error && <ErrorMessage message={error} />}
-        </div>
-        {loading ? (
-          <Loading />
-        ) : (
-          <div className="flex flex-wrap flex-col justify-center gap-10 m-auto md:px-10  md:flex-row  ">
-            {data.map((data) => (
-              <Card
-                title={data.title}
-                description={data.description}
-                created_at={data.created_at}
-                id={data.id}
-                skills={data.skills}
-                key={data.id}
-                images={data.images}
-              />
-            ))}
-          </div>
+      <div className="search my-20">
+        <Search setSearch={setSearch} />
+        {data.length == 0 && (
+          <div className="text-center text-black my-10">Nothing Matched!</div>
         )}
+        {error && <ErrorMessage message={error} />}
+      </div>
+      <div className="flex justify-center">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+          {data.map((data) => (
+            <Card
+              title={data.title}
+              description={data.description}
+              created_at={data.created_at}
+              id={data.id}
+              skills={data.skills}
+              key={data.id}
+              images={data.images}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

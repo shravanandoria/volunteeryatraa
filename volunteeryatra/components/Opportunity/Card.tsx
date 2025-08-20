@@ -26,7 +26,7 @@ const Card = ({
   };
 
   return (
-    <div className="shadow-2xl flex flex-col justify-between md:w-[400px]">
+    <div className="shadow-2xl flex flex-col justify-between md:w-[300px] ">
       {/* Image */}
       <a href="#">
         <img
