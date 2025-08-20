@@ -12,7 +12,7 @@ This is a simplified version of the https://www.volunteeryatra.com/ platform.
 1. Public page showing all volunteer opportunities
 2. Create new opportunities (via backend API)
 3. Apply to an opportunity (linked via opportunity_id)
-4. Search functionality (by title/description/skills), used debouncing to cache search results
+4. Search functionality (by title/description/skills), used debouncing and caching to optimise search results
 5. Clean separation: frontend <---> backend <---> database
 
 ⚡ API Endpoints
