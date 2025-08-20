@@ -47,3 +47,31 @@ BACKEND
 🔗 Live Link:- https://volunteeryatraa.vercel.app/
 
 
+🏗 Key Architectural Decisions
+
+1. Separation of Concerns 
+    - Kept frontend and backend as independent codebases (in /frontend (volunteeryatra) and /backend) -> ensures modularity and easier deployments.
+
+2. Backend with Express.js
+    - Built REST API endpoints (/api/opportunities, /api/applications) instead of letting frontend talk directly to Supabase.
+    - This keeps the system secure and mirrors real-world client–server separation.
+
+3. Database Access (Supabase PostgreSQL with raw SQL)
+    - Used pg client for raw SQL queries.
+    - No ORM -> lighter and gives better control, following the assignment’s constraints.
+
+4. Search Implementation
+    - Used PostgreSQL’s ILIKE operator for case-insensitive keyword search across title, description, and skills.
+    - API-driven search keeps business logic centralized in backend.
+    - used optimisation methods like debouncing and caching to improve search efficiency 
+
+5. Deployment Decisions
+    - Backend on AWS EC2 with PM2 + Nginx reverse proxy -> production-ready, scalable.
+    - Frontend on Vercel -> optimized for Next.js with minimal config.
+    - Environment variables used for flexibility (NEXT_PUBLIC_API_URL).
+
+6. Error Handling & Validation
+    - Basic validation in backend (ensuring required fields are present).
+    - Error messages returned in JSON -> consistent API responses.
+
+
