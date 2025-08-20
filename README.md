@@ -47,7 +47,7 @@ BACKEND
 🔗 Live Link:- https://volunteeryatraa.vercel.app/
 
 
-🏗 Key Architectural Decisions
+👷 Key Architectural Decisions
 
 1. Separation of Concerns 
     - Kept frontend and backend as independent codebases (in /frontend (volunteeryatra) and /backend) -> ensures modularity and easier deployments.
