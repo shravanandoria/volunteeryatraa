@@ -70,19 +70,23 @@ export default function Home() {
         {error && <ErrorMessage message={error} />}
       </div>
       <div className="flex justify-center">
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-10">
-          {data.map((data) => (
-            <Card
-              title={data.title}
-              description={data.description}
-              created_at={data.created_at}
-              id={data.id}
-              skills={data.skills}
-              key={data.id}
-              images={data.images}
-            />
-          ))}
-        </div>
+        {loading ? (
+          <Loading />
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 md:gap-10">
+            {data.map((data) => (
+              <Card
+                title={data.title}
+                description={data.description}
+                created_at={data.created_at}
+                id={data.id}
+                skills={data.skills}
+                key={data.id}
+                images={data.images}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
